@@ -346,7 +346,7 @@ html {
 
 /*<SESSIONS LEFT>==================================================================================================================================================================================================================*/
 .session__left {
-  background: url("../../images/section_1.png");
+  background: url("../images/section_1.png");
   width: 50%;
   display: flex;
   justify-content: center;
@@ -370,7 +370,7 @@ html {
 }
 
 .session__left__text-1 {
-  background: url("../../images/num_1-left.png") no-repeat;
+  background: url("../images/num_1-left.png") no-repeat;
   height: 58px;
   color: #fff;
   width: 50%;
@@ -378,14 +378,14 @@ html {
 }
 
 .session__left__text-2 {
-  background: url("../../images/num_2-left.png") no-repeat;
+  background: url("../images/num_2-left.png") no-repeat;
   height: 58px;
   color: #fff;
   width: 50%;
 }
 
 .session__left__text-3 {
-  background: url("../../images/num_3-left.png") no-repeat;
+  background: url("../images/num_3-left.png") no-repeat;
   height: 58px;
   color: #fff;
   width: 50%;
@@ -415,7 +415,7 @@ html {
 
 /*<SESSIONS RIGHT>==================================================================================================================================================================================================================*/
 .session__right {
-  background: url("../../images/section_2.png");
+  background: url("../images/section_2.png");
   height: 722px;
   width: 50%;
   display: flex;
@@ -440,7 +440,7 @@ html {
 }
 
 .session__right__text-1 {
-  background: url("../../images/num_1-right.png") no-repeat;
+  background: url("../images/num_1-right.png") no-repeat;
   height: 58px;
   color: #000;
   width: 50%;
@@ -448,7 +448,7 @@ html {
 }
 
 .session__right__text-2 {
-  background: url("../../images/num_2-right.png") no-repeat;
+  background: url("../images/num_2-right.png") no-repeat;
   height: 58px;
   color: #000;
   width: 50%;
@@ -566,7 +566,7 @@ html {
 
 /*<REVIEWS>==================================================================================================================================================================================================================*/
 .reviews__row {
-  background: url("../../images/reviews_background.png") no-repeat;
+  background: url("../images/reviews_background.png") no-repeat;
   height: 800px;
   display: flex;
   flex-direction: column;
