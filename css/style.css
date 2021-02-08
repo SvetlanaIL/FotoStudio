@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__background {
-  background: url("../../images/header_background.png") center/cover no-repeat;
+  background: url("../images/header_background.png") center/cover no-repeat;
   height: 510px;
 }
 
