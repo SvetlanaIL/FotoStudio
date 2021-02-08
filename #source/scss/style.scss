@@ -1,0 +1,553 @@
+/*<МИКСИНЫ>======================================================================================================================================================================================================*/
+@import "mixins.scss";
+
+/*<Подключаем шрифты>==============================================================================================================================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet');
+
+/*<Шрифт по умолчанию>=================================================================================================================================================================================================*/
+$fontfamily: 'Poppins', sans-serif;
+
+/*<ПЕРЕМЕННЫЕ>==================================================================================================================================================================================================================*/
+$minwidth: 320px;
+// $color_1: #fff;
+
+
+/*<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>======================================================================================================================================================================================================*/
+@import "null.scss";
+
+/*<ОБОЛОЧКА>==================================================================================================================================================================================================================*/
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+
+}
+
+/*<ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================*/
+.container {
+	width: 1200px;
+	// padding: 0px 25px;
+	margin: 0px auto;
+}
+
+/*<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================*/
+@import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
+
+
+/*<ОСНОВНОЙ БЛОК>===========================================================================================================================================================================================================*/
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include flexbox();
+	flex-direction: column;
+}
+// .main-screen {
+// 	flex: 1 0 100%;
+// 	position: relative;
+// 	/* .main-screen__bg*/
+// 	&__bg {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 	}
+// }
+
+.button-clk button:hover, .button-clk button:focus {
+	background-color: #222;
+	transition: 0.5s ease 0s;
+}
+
+#btn1:hover, #btn1:focus {
+	background-color: #fff;
+	color: #000;
+	transition: 0.5s ease 0s;
+}
+
+#btn2:hover, #btn2:focus {
+	background-color: #222;
+	transition: 0.5s ease 0s;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/*<SESSIONS>==================================================================================================================================================================================================================*/
+
+.sessions__row {
+	@include flexbox();
+	flex-direction: row;
+	margin: 100px 0 0 0;
+}
+
+/*<SESSIONS LEFT>==================================================================================================================================================================================================================*/
+
+.session__left {
+	background: url('../../images/section_1.png');
+	width: 50%;
+	@include flexbox();
+	justify-content: center;
+}
+
+.session__left__content {
+	width: 80%;
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+}
+
+.session__left__icon {
+	padding: 80px 0 20px 0;
+}
+
+.session__left__header {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+.session__left__text-1 {
+	background: url('../../images/num_1-left.png') no-repeat;
+	height: 58px;
+	color: #fff;
+	width: 50%;
+	margin: 80px 0 0 0;
+}
+
+.session__left__text-2 {
+	background: url('../../images/num_2-left.png') no-repeat;
+	height: 58px;
+	color: #fff;
+	width: 50%;
+}
+
+.session__left__text-3 {
+	background: url('../../images/num_3-left.png') no-repeat;
+	height: 58px;
+	color: #fff;
+	width: 50%;
+
+}
+
+.left-text {
+	margin-bottom: 36px;
+	font-size: 18px;
+	position: relative;
+		div {
+			position: absolute;
+			left: 70px;
+			bottom: 22px;
+		}
+}
+
+.session-button {
+	margin: 44px 0 0 0;
+	button {
+		width: 215px;
+		height: 45px;
+		background-color: #ff3c2d;
+		color: #fff;
+		font-size: 18px;
+	}
+}
+
+/*<SESSIONS RIGHT>==================================================================================================================================================================================================================*/
+
+.session__right {
+	background: url('../../images/section_2.png');
+	height: 722px;
+	width: 50%;
+	@include flexbox();
+	justify-content: center;
+}
+
+.session__right__content {
+	width: 80%;
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+}
+
+.session__right__icon {
+	padding: 80px 0 20px 0;
+}
+
+.session__right__header {
+	color: #000;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+.session__right__text-1 {
+	background: url('../../images/num_1-right.png') no-repeat;
+	height: 58px;
+	color: #000;
+	width: 50%;
+	margin: 80px 0 0 0;
+}
+
+.session__right__text-2 {
+	background: url('../../images/num_2-right.png') no-repeat;
+	height: 58px;
+	color: #000;
+	width: 50%;
+}
+
+.right-text {
+	margin-bottom: 36px;
+	font-size: 18px;
+	position: relative;
+		div {
+			position: absolute;
+			left: 70px;
+			bottom: 22px;
+		}
+}
+
+/*<SERVICES>==================================================================================================================================================================================================================*/
+
+.services {
+	margin: 125px 0 0 0;
+}
+
+.services__header {
+	font-size: 50px;
+	text-align: center;
+}
+
+.services__categories {
+	max-width: 1000px;
+	margin: 45px auto;
+		ul {
+			@include flexbox();
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.categories {
+			&__item {
+				color: #ababab;
+				display: inline-block; 
+				cursor: pointer;
+			}
+			
+		}
+		.categories__item:after {
+			display: block;
+			content: "";
+			height: 3px;
+			width: 0%;
+			background-color: #ff3c2d;
+			margin: 5px 0 0 0;
+			transition: width 0.4s ease-in-out;
+			color: #000;
+		}
+		.categories__item:hover:after,
+		.categories__item:focus:after {
+			width: 100%;
+		}
+		.categories__item:hover {
+			color: #000;
+		}
+}
+
+.categories__item.active {
+	color: #000;
+}
+
+.services__portfolio-gallery {
+	@include flexbox();
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.portfolio__column {
+	margin: 0 0 40px 0;
+}
+
+.portfolio__photo {
+	position: relative;
+	display: inline-block;
+		.photo__text {
+			width: 130px;
+			height: 35px;
+			background: rgba(68, 68, 68, 0.7);
+			text-align: center;
+			vertical-align: middle;
+			@include flexbox();
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 320px;
+			left: 0px;
+			a {
+				display: inline-block;
+				color: #fff;
+			}
+			i {
+				color: #fff;
+				padding: 0 0 0 10px;
+			}
+		}
+}
+
+.photo-inactive {
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.photo-active {
+	overflow: visible;
+	opacity: 1;
+	transition: all 1s ease;
+}
+
+.portfolio__bottom, .revies__bottom {
+	img {
+		width: 100%;
+	}
+}
+
+/*<REVIEWS>==================================================================================================================================================================================================================*/
+
+.reviews__row {
+	background: url('../../images/reviews_background.png') no-repeat;
+	height: 800px;
+	@include flexbox();
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.reviews__header-h1 {
+	font-size: 50px;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.reviews__header-h2 {
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.slider__img {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-bottom: 30px;
+	img {
+		width: 350px;
+		height: 350px;
+	}
+}
+
+.slider__author {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.slider__name {
+	color: #fff;
+	font-size: 16px;
+	margin: 0 0 0 0;
+}
+
+.slider__review {
+	@include flexbox();
+	flex-direction: row;
+}
+
+.slider__review-text {
+	color: #fff;
+	font-size: 18px;
+	font-style: italic;
+	margin: 50px 0 0 -15px;
+	line-height: 1.5;
+}
+
+.slick-prev, .slick-next {
+	opacity: 0.3;
+}
+
+/*<BLOG>==================================================================================================================================================================================================================*/
+
+.blog__header-h1 {
+	font-size: 50px;
+	text-align: center;
+	margin: 95px 0 0 0;
+}
+
+.blog__header-h2 {
+	font-size: 18px;
+	text-align: center;
+	margin: 30px 0 80px 0;
+}
+
+.blog__column-1, .blog__column-2, .blog__column-3 {
+	background-color: #e3e3e3;
+	height: 500px;
+	width: 386px;
+}
+
+.blog__three-column, .blog__three-column-2 {
+	@include flexbox();
+	flex-direction: row;
+	justify-content:space-between;
+}
+
+.blog__three-column-2 {
+	margin: 20px 0 120px 0;
+	display: none;
+}
+
+.blog__column-text {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 30px 10px 0 10px;
+	font-weight: 900;
+}
+
+.blog__column-content {
+	height: 200px;
+	@include flexbox();
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.blog__column-bottom {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+
+.blog__column-comments {
+	@include flexbox();
+	flex-direction: row;
+}
+
+.comment__text {
+	padding-left: 10px;
+	color: #ff3c2d;
+}
+
+.blog__column-date {
+	color: #ababab;
+}
+
+.blog__button {
+	text-align: center;
+	margin-bottom: 60px;
+	button {
+		width: 215px;
+		height: 45px;
+		color: #fff;
+		background-color: #ff3c2d;
+		font-size: 18px;
+		margin: 60px auto;
+	}
+}
+
+/*<POPUP>==================================================================================================================================================================================================================*/
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s ease 0s;
+}
+
+.popup__overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup__body {
+	min-height: 100%;
+	@include flexbox();
+	justify-content: center;
+	align-items: center;
+}
+
+.popup__content {
+	background-color: #555;
+	color: #fff;
+	max-width: 800px;
+	padding: 50px 100px;
+	position: relative;
+}
+
+.form * {
+	line-height: 2;
+	font-size: 14pt;
+	outline: none;
+}
+
+.form {
+	label {
+		margin: 50px 0 0 0;
+	}
+}
+
+.form input {
+	margin: 10px 0 10px 0;
+	width: 250px;
+	height: 30px;
+	border-radius: 10px;
+	border-color: #ccc;
+	opacity: 0.6;
+}
+
+.form input:focus {
+	box-shadow: 0 0 15px #ccc;
+	opacity: 1;
+}
+
+.form__button {
+	margin: 30px auto;
+	width: 200px;
+	height: 40px;
+	background-color: #ff3c2d;
+	color: #fff;
+	font-size: 18px;
+}
+
+.popup__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
+
+#error {
+	text-align: center;
+	color: #f00;
+	font-size: 14pt;
+}

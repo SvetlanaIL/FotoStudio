@@ -1,0 +1,157 @@
+.header__row {
+	height: 100px;
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+		@media (max-width:965px) {
+			margin: 0 15px;
+		}
+		@media (max-width:850px) {
+			margin: 0 25px;
+		}
+}
+
+.header__menu {
+	width: 520px;
+
+}
+
+.menu__list {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+		@media (max-width:965px) {
+			justify-content: space-around;
+		}
+		li {
+			a {
+				color: #000;
+				font-size: 16px;
+					@media (max-width:965px) {
+						font-size: 14px;
+					}
+					@media (max-width:850px) {
+						font-size: 12px;
+					}
+			}
+		}
+}
+
+.menu__list li:after {
+			display: block;
+			content: "";
+			height: 3px;
+			width: 0%;
+			background-color: #ff3c2d;
+			margin: 5px 0 0 0;
+			transition: width 0.3s ease-in-out;
+		}
+
+.menu__list li:hover:after, .menu__list li:focus:after {
+	width: 100%;
+}
+
+.header__button {
+	button {
+		width: 120px;
+		height: 35px;
+		color: #fff;
+		background-color: #ff3c2d;
+		font-size: 16px;
+			@media (max-width:935px) {
+				font-size: 14px;
+				width: 100px;
+				height: 25px;
+			}
+			@media (max-width:850px) {
+				font-size: 12px;
+				width: 90px;
+				height: 25px;
+			}
+	}
+}
+
+.header__social {
+	width: 115px;
+	@include flexbox();
+	justify-content: space-around;
+		a {
+			img {
+
+				height: 16px;
+			}
+		}
+}
+
+.header__background {
+	background: url('../../images/header_background.png') center / cover no-repeat;
+	height: 510px;
+}
+
+.background__column {
+	width: 600px;
+	height: 508px;
+	@include flexbox(); 
+	justify-content: space-around;
+	align-items: center;
+}
+
+.header__background-row {
+	// width: 493px;
+		@media (max-width:1080px) {
+			padding: 0 0 0 -10px;
+		}
+}
+
+.background-row__big-text {
+	width: 443px;
+	padding: 0 0 30px 0;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 60px;
+		@media (max-width:1470px) {
+			font-size: 50px;
+		}
+		@media (max-width:1326px) {
+			font-size: 40px;
+		}
+		@media (max-width:1194px) {
+			font-size: 30px;
+			line-height: 1.1;
+		}
+}
+
+.background-row__small-text {
+	color: #fff;
+	font-size: 18px;
+	padding: 0 0 30px 0;
+		@media (max-width:1470px) {
+			font-size: 16px;
+		}
+		@media (max-width:1326px) {
+			font-size: 14px;
+		}
+		@media (max-width:1194px) {
+			font-size: 12px;
+		}
+}
+
+.background-row__button {
+	button {
+		width: 215px;
+		height: 45px;
+		font-size: 18px;
+		color: #fff;
+		background-color: #ff3c2d;
+			@media (max-width:1326px) {
+				font-size: 14px;
+				width: 175px;
+			}
+			@media (max-width:1194px) {
+				font-size: 12px;
+				width: 135px;
+			}
+	}
+	
+}

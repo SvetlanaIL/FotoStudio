@@ -1,0 +1,30 @@
+.footer__row {
+	background-color: #222;
+}
+
+.footer__three-column {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 60px 0;
+}
+
+.address__header, .contacts__header {
+	color: #626262;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+
+.address__header-inner, .contacts__inner {
+	color: #fff;
+	line-height: 2;
+}
+
+.address__header-text {
+	@include flexbox();
+	flex-direction: row;
+}
+
+.address__header-inner {
+	margin-left: 10px;
+}
