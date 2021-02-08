@@ -90,14 +90,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================*/
-.ibg {
+/* .ibg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .ibg img {
   display: none;
-}
+} */
 
 .header__row {
   height: 100px;
